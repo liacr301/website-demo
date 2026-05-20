@@ -1,0 +1,443 @@
+.overview {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.overview-body {
+  padding: 18px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── Grid rows ── */
+.overview-row3 {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 0.9fr;
+  gap: 16px;
+}
+
+/* ══════════════════════════════════════
+   BIM CARD
+══════════════════════════════════════ */
+.bim-card { padding: 18px; }
+
+.bim-viewer {
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 12px;
+  border: 1px solid rgba(44,34,24,0.08);
+}
+
+.bim-model-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.bim-3d {
+  position: relative;
+  width: 200px;
+  height: 130px;
+}
+
+.bim-floor {
+  position: absolute;
+  border-radius: 3px;
+  opacity: 0.88;
+  transition: opacity 0.2s;
+}
+
+.bim-floor-1    { width: 180px; height: 20px; bottom: 10px; left: 10px; background: #4E8040; box-shadow: 0 0 8px rgba(78,128,64,0.25); }
+.bim-floor-2    { width: 140px; height: 20px; bottom: 32px; left: 30px; background: #4A6E9A; transform: skewX(-15deg); }
+.bim-floor-3    { width: 100px; height: 20px; bottom: 54px; left: 50px; background: #4A6E9A; transform: skewX(-15deg); }
+.bim-floor-roof { width: 80px;  height: 18px; bottom: 76px; left: 60px; background: #A0907A; transform: skewX(-15deg); opacity: 0.7; }
+.bim-wall-left  { width: 30px;  height: 80px; bottom: 10px; left: 10px;  background: #4E8040; opacity: 0.45; transform: skewY(-15deg); }
+.bim-wall-right { width: 30px;  height: 80px; bottom: 10px; right: 10px; background: #4E8040; opacity: 0.45; transform: skewY(15deg); }
+.bim-label {
+  position: absolute; top: 8px; left: 10px;
+  font-size: 8px; color: var(--text-muted); letter-spacing: 0.08em; text-transform: uppercase;
+}
+
+.bim-legend {
+  display: flex;
+  gap: 16px;
+}
+
+.bim-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 9px;
+  color: var(--text-muted);
+}
+
+/* ══════════════════════════════════════
+   PROGRESS CARD
+══════════════════════════════════════ */
+.progress-card { padding: 18px; }
+
+.progress-main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.progress-stat-label {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 10px;
+}
+
+.progress-stat-label:first-child { margin-top: 0; }
+
+.progress-stat-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+.progress-phases {
+  display: flex;
+  gap: 8px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.phase-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 4px;
+  background: rgba(44,34,24,0.03);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.phase-check { font-size: 13px; color: var(--success); }
+.phase-icon  { font-size: 13px; color: var(--accent); }
+
+.phase-label {
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.phase-val {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* ══════════════════════════════════════
+   KEY PROJECT NUMBERS
+══════════════════════════════════════ */
+.kpn-card { padding: 18px; }
+
+.kpn-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.kpn-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.kpn-row:last-child { border-bottom: none; }
+
+.kpn-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.kpn-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  text-align: right;
+}
+
+.kpn-value.accent { color: var(--accent); }
+
+.kpn-value.sm {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.kpn-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 2px 0;
+}
+
+/* ══════════════════════════════════════
+   SCHEDULE TABLE
+══════════════════════════════════════ */
+.schedule-card { padding: 18px; }
+
+.schedule-table {
+  width: 100%;
+  font-size: 10px;
+}
+
+.schedule-table th {
+  font-size: 8px;
+  padding: 6px 8px;
+}
+
+.schedule-table td {
+  padding: 7px 8px;
+  font-size: 11px;
+}
+
+.status-text {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.status-completed  { color: var(--text-muted); }
+.status-inprogress { color: var(--info); }
+.status-upcoming   { color: var(--accent); }
+
+.schedule-legend {
+  display: flex;
+  gap: 14px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+  font-size: 9px;
+  color: var(--text-muted);
+}
+
+.schedule-legend span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ══════════════════════════════════════
+   LATEST PHOTOS – SLIDER
+══════════════════════════════════════ */
+.latest-photos-card { padding: 18px; }
+
+.photo-slider {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.photo-slider-main {
+  width: 100%;
+  height: 160px;
+  border-radius: var(--radius);
+  background-size: cover;
+  background-position: center;
+  background-color: #1a1a1a;
+}
+
+.photo-slider-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0 2px;
+}
+
+.photo-slider-date {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.04em;
+}
+
+.photo-slider-caption {
+  font-size: 9px;
+  color: var(--text-muted);
+}
+
+.photo-slider-strip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.photo-slider-nav {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(44,34,24,0.08);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 11px;
+  transition: background 0.15s, color 0.15s;
+  padding: 0;
+}
+
+.photo-slider-nav:hover {
+  background: var(--accent-dim);
+  color: var(--accent);
+}
+
+.photo-slider-thumbs {
+  display: flex;
+  gap: 5px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.photo-slider-thumb {
+  flex: 1;
+  height: 48px;
+  border-radius: calc(var(--radius) - 1px);
+  background-size: cover;
+  background-position: center;
+  background-color: #ccc;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.15s, opacity 0.15s;
+  opacity: 0.65;
+}
+
+.photo-slider-thumb.active {
+  border-color: var(--accent);
+  opacity: 1;
+}
+
+.photo-slider-thumb:hover:not(.active) {
+  opacity: 0.85;
+}
+
+/* ── legacy placeholder (Photo History) ── */
+.photo-placeholder {
+  background: linear-gradient(135deg, #D8D0C0 0%, #C8C0B0 100%);
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ══════════════════════════════════════
+   PHOTO HISTORY
+══════════════════════════════════════ */
+.photo-history-card { padding: 18px; }
+
+.card-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.photo-history-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 7px;
+  margin-bottom: 14px;
+}
+
+.photo-history-item-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.photo-history-item-wrap:hover .photo-history-img { opacity: 0.8; }
+
+.photo-history-img {
+  height: 64px;
+  transition: opacity 0.18s;
+}
+
+.photo-date {
+  font-size: 8px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.view-all-btn {
+  width: 100%;
+  justify-content: center;
+  font-size: 10px;
+  padding: 8px;
+}
+
+/* ══════════════════════════════════════
+   FINISH SELECT BOOK
+══════════════════════════════════════ */
+.finish-row-card { padding: 18px; }
+
+.finish-row {
+  display: flex;
+  gap: 12px;
+}
+
+.finish-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.finish-item-label {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.finish-item-img {
+  height: 64px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid rgba(44,34,24,0.10);
+  display: block;
+}
+
+.finish-item-detail {
+  font-size: 10px;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.finish-item-status { margin-top: 2px; }

@@ -1,0 +1,368 @@
+/* ── Logistics page ──────────────────────────────────────── */
+
+.logistics-page {
+  padding: 0 0 2rem;
+  color: var(--text);
+}
+
+/* KPI grid */
+.log-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1.5rem 1.5rem 0;
+}
+
+.log-kpi-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+}
+
+.log-kpi-icon {
+  font-size: 2.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.log-kpi-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.log-kpi-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.log-kpi-value {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.1;
+}
+
+.log-kpi-trend {
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+/* Two-column layout */
+.log-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+}
+
+/* ── LEFT panel ──────────────────────────────────────────── */
+.log-left {
+  padding: 1.25rem 1.25rem 1rem;
+  overflow: hidden;
+}
+
+.log-table-wrapper {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.log-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.68rem;
+}
+
+.log-table th {
+  text-align: left;
+  padding: 0.4rem 0.45rem;
+  font-size: 0.56rem;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+  background: var(--bg-panel);
+}
+
+.log-th-group {
+  text-align: center !important;
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  color: var(--accent) !important;
+  font-size: 0.6rem !important;
+  letter-spacing: 0.08em !important;
+}
+
+.log-th-pkg {
+  vertical-align: bottom;
+}
+
+.log-table td {
+  padding: 0.45rem 0.45rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+  color: var(--text);
+}
+
+.log-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.log-table tbody tr:hover td {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+.log-total-row td {
+  border-top: 1px solid var(--accent) !important;
+  color: var(--accent) !important;
+  border-bottom: none !important;
+}
+
+.log-pkg-name {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.log-pkg-id {
+  font-size: 0.58rem;
+  color: var(--text-muted);
+}
+
+.log-status-badge {
+  display: inline-block;
+  padding: 0.15rem 0.45rem;
+  border-radius: 3px;
+  font-size: 0.58rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.log-bar-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+}
+
+.log-progress {
+  width: 52px;
+  height: 5px;
+  flex-shrink: 0;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.log-progress .progress-bar-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+.log-muted {
+  color: var(--text-muted);
+  font-size: 0.68rem;
+}
+
+.log-num {
+  text-align: right;
+  font-size: 0.7rem;
+  color: var(--text);
+}
+
+.log-variance {
+  font-weight: 700;
+}
+
+/* Legend */
+.log-legend {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.85rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.log-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.62rem;
+  color: var(--text-muted);
+}
+
+.log-legend-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── RIGHT panel ─────────────────────────────────────────── */
+.log-right {
+  padding: 1.25rem 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  overflow: hidden;
+}
+
+.log-right-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.log-search-row {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.log-filter-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.log-apply-btn {
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+/* Doc type tabs */
+.log-type-tabs {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.log-type-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  min-width: 68px;
+}
+
+.log-type-tab:hover {
+  border-color: var(--accent);
+  background: rgba(201, 168, 76, 0.06);
+}
+
+.log-type-tab.active {
+  border-color: var(--accent);
+  background: rgba(201, 168, 76, 0.12);
+}
+
+.log-tab-icon {
+  font-size: 1.1rem;
+}
+
+.log-tab-label {
+  font-size: 0.55rem;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.log-tab-count {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* Doc table */
+.log-doc-table-wrapper {
+  overflow-x: auto;
+  flex: 1;
+}
+
+.log-doc-table th,
+.log-doc-table td {
+  white-space: nowrap;
+}
+
+.log-doc-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.log-file-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  font-size: 0.55rem;
+  font-weight: 800;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.log-doc-name {
+  font-size: 0.7rem;
+  color: var(--text);
+}
+
+.log-actions {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.log-action-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-muted);
+  padding: 0.2rem 0.45rem;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.log-action-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* Footer */
+.log-doc-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .log-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .log-kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .log-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+}

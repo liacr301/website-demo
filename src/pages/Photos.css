@@ -1,0 +1,221 @@
+.photos-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.photos-body {
+  padding: 18px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.photos-filter-card  { padding: 16px 18px; }
+.photos-section-card { padding: 18px; }
+.photos-timeline-card{ padding: 18px; }
+
+/* Month heading */
+.photos-month-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+/* ── Week tabs ── */
+.week-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 18px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.week-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 9px 14px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: all 0.18s ease;
+  white-space: nowrap;
+  min-width: 105px;
+  flex-shrink: 0;
+}
+
+.week-tab:hover {
+  border-color: var(--accent-border);
+  background: rgba(44,34,24,0.05);
+}
+
+.week-tab.active {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.week-tab-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text);
+  text-transform: uppercase;
+}
+
+.week-tab.active .week-tab-label,
+.week-tab.active .week-tab-range {
+  color: #FDFAF6;
+}
+
+.week-tab-range {
+  font-size: 9px;
+  color: var(--text-muted);
+}
+
+/* ── Photo category grid ── */
+.photos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.photo-category-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform 0.18s ease;
+}
+
+.photo-category-card:hover { transform: translateY(-2px); }
+
+.photo-category-img {
+  height: 124px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.photo-category-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2px;
+}
+
+.photo-category-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.photo-category-count {
+  font-size: 9px;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.photo-category-arrow {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  background: rgba(245,240,232,0.16);
+  border: none;
+  color: rgba(245,240,232,0.85);
+  font-size: 11px;
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s;
+}
+
+.photo-category-arrow:hover { background: rgba(245,240,232,0.28); }
+
+/* ── Timeline tabs ── */
+.timeline-tabs {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 14px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.timeline-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 9px 13px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.18s ease;
+  min-width: 92px;
+  flex-shrink: 0;
+}
+
+.timeline-tab.active {
+  border-color: var(--accent-border);
+  background: var(--accent-dim);
+}
+
+.timeline-tab-range {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text);
+  text-transform: uppercase;
+}
+
+.timeline-tab-count {
+  font-size: 8.5px;
+  color: var(--text-muted);
+}
+
+/* ── Timeline photo strip ── */
+.timeline-photos {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.timeline-photo-thumb {
+  flex: 1;
+  height: 72px;
+  border-radius: var(--radius);
+  min-width: 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 5px 6px;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.18s;
+}
+
+.timeline-photo-thumb:hover { opacity: 0.8; }
+
+.timeline-photo-label {
+  font-size: 7.5px;
+  color: rgba(245,240,232,0.72);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  position: relative;
+  z-index: 1;
+}

@@ -1,0 +1,30 @@
+.app-shell {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--bg-main);
+}
+
+.app-main-col {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.app-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.app-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: var(--bg-main);
+  min-width: 0;
+  /* Subtle shadow at the left edge where sidebar meets content */
+  box-shadow: inset 2px 0 8px rgba(20, 30, 26, 0.06);
+}

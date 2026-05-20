@@ -1,0 +1,530 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   Planning.css – Planning & Schedule page
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.pl-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.pl-body {
+  padding: 16px 18px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ── KPI Summary Row ───────────────────────────────────────────────────────── */
+
+.pl-kpi-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.pl-kpi-card {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.pl-kpi-label {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.pl-kpi-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.03em;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.pl-kpi-sub {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-top: 2px;
+}
+
+.pl-kpi-date {
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  margin-top: 2px;
+}
+
+/* ── Content card padding ──────────────────────────────────────────────────── */
+
+.pl-body > .card,
+.pl-bottom-cols .card {
+  padding: 18px;
+}
+
+/* ── Schedule / Gantt ──────────────────────────────────────────────────────── */
+
+.gantt-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.gantt-legend-row {
+  display: flex;
+  gap: 14px;
+}
+
+.gantt-leg-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9px;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.gantt-leg-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.gantt-dot--done { background: #4E8040; }
+.gantt-dot--ip   { background: var(--accent); }
+.gantt-dot--plan { background: #C8D4C0; border: 1px solid rgba(44,34,24,0.16); }
+
+/* Gantt layout */
+
+.gantt-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  overflow-x: auto;
+}
+
+.gantt-header,
+.gantt-row {
+  display: flex;
+  align-items: center;
+}
+
+.gantt-act-col {
+  width: 200px;
+  flex-shrink: 0;
+  padding-right: 8px;
+}
+
+.gantt-th {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding-bottom: 4px;
+}
+
+.gantt-timeline-col {
+  flex: 1;
+  min-width: 400px;
+  position: relative;
+}
+
+.gantt-pct-col {
+  width: 58px;
+  flex-shrink: 0;
+  text-align: right;
+  padding-left: 8px;
+}
+
+/* Year row */
+
+.gantt-year-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
+}
+
+.gantt-year-label {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  text-align: center;
+}
+
+.gantt-year-divider {
+  width: 1px;
+  height: 12px;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+/* Month row */
+
+.gantt-month-row {
+  height: 18px;
+  position: relative;
+  margin-bottom: 4px;
+}
+
+.gantt-month-tick {
+  position: absolute;
+  transform: translateX(-50%);
+  font-size: 7.5px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  top: 2px;
+}
+
+.gantt-today-head {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gantt-today-label {
+  font-size: 7px;
+  font-weight: 700;
+  color: #e55;
+  letter-spacing: 0.06em;
+  margin-bottom: 2px;
+}
+
+/* Activity rows */
+
+.gantt-row {
+  border-bottom: 1px solid var(--border);
+  padding: 4px 0;
+}
+
+.gantt-row:last-child { border-bottom: none; }
+
+.gantt-act-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.gantt-act-id {
+  font-size: 7.5px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+}
+
+.gantt-act-name {
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* Timeline bar area */
+
+.gantt-timeline-col {
+  height: 24px;
+  position: relative;
+  background: rgba(44,34,24,0.03);
+  border-radius: 3px;
+}
+
+.gantt-today-line {
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  width: 1.5px;
+  background: #e55;
+  z-index: 5;
+  opacity: 0.85;
+}
+
+.gantt-bar {
+  position: absolute;
+  top: 4px;
+  height: 16px;
+  border-radius: 3px;
+}
+
+.gantt-bar--done    { background: #4E8040; }
+.gantt-bar--ip      { background: var(--accent); }
+.gantt-bar--planned { background: #C0CCA8; border: 1px solid rgba(44,34,24,0.14); }
+
+.gantt-pct-val {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+/* ── Activity Summary Cards ────────────────────────────────────────────────── */
+
+.pl-summary-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.pl-summary-card {
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.pl-sum-icon {
+  font-size: 26px;
+  flex-shrink: 0;
+}
+
+.pl-sum-label {
+  font-size: 8.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.pl-sum-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1;
+}
+
+.pl-sum-status {
+  font-size: 10px;
+  font-weight: 700;
+  color: #4aa038;
+  letter-spacing: 0.08em;
+  margin-top: 4px;
+}
+
+/* ── Bottom Two-Column ─────────────────────────────────────────────────────── */
+
+.pl-bottom-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+/* ── Planned vs Actual ─────────────────────────────────────────────────────── */
+
+.pva-legend {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 10px;
+}
+
+.pva-leg-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9px;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.pva-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.pva-dot--complete { background: #4E8040; }
+.pva-dot--planned  { background: #C0CCA8; border: 1px solid rgba(44,34,24,0.20); }
+
+/* Chart */
+
+.pva-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.pva-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pva-label {
+  width: 130px;
+  flex-shrink: 0;
+  font-size: 8.5px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.pva-bars {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pva-bar-track {
+  position: relative;
+  height: 14px;
+  background: rgba(44,34,24,0.05);
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.pva-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+/* Planned bar – rendered first, behind complete */
+.pva-bar--planned {
+  background: rgba(44,34,24,0.12);
+  z-index: 1;
+}
+
+/* Complete bar – on top */
+.pva-bar--complete {
+  background: #4E8040;
+  z-index: 2;
+  opacity: 0.9;
+}
+
+.pva-vals {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.pva-complete-val {
+  font-size: 8.5px;
+  font-weight: 700;
+  color: #4E8040;
+}
+
+.pva-planned-val {
+  font-size: 8.5px;
+  color: var(--text-muted);
+}
+
+.pva-x-axis {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 138px;
+  margin-top: 4px;
+}
+
+.pva-x-tick {
+  font-size: 8px;
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+/* ── BIM shared (copied from Metrics) ─────────────────────────────────────── */
+
+.bim-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bim-label {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.bim-body {
+  display: flex;
+  gap: 6px;
+  align-items: stretch;
+}
+
+.bim-svg {
+  flex: 1;
+  height: 220px;
+  border-radius: 6px;
+  background: #D8D4C8;
+  border: 1px solid var(--border);
+  display: block;
+  object-fit: contain;
+  width: 0;
+}
+
+.bim-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px 0;
+}
+
+.bim-tool-btn {
+  width: 28px;
+  height: 28px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--text-muted);
+  font-size: 11px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+
+.bim-tool-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.bim-legend {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding-top: 4px;
+}
+
+.bim-leg-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9px;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.bim-leg-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}

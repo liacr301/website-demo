@@ -1,0 +1,451 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   Metrics.css – Metrics & Execution page
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.mx-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.mx-body {
+  padding: 16px 18px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ── KPI Summary Row ───────────────────────────────────────────────────────── */
+
+.mx-kpi-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.mx-kpi-card {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mx-kpi-label {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.mx-kpi-value {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.03em;
+  line-height: 1;
+  margin-top: 2px;
+}
+
+.mx-kpi-sub {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-top: 2px;
+}
+
+.mx-kpi-date {
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  margin-top: 2px;
+}
+
+/* ── Content card padding ──────────────────────────────────────────────────── */
+
+.mx-col-left .card,
+.mx-col-right .card {
+  padding: 18px;
+}
+
+/* ── Two-Column Layout ─────────────────────────────────────────────────────── */
+
+.mx-cols {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.mx-col-left,
+.mx-col-right {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ── Execution by Chapter ──────────────────────────────────────────────────── */
+
+.ch-legend {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.ch-leg-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  color: var(--text-muted);
+}
+
+.ch-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.ch-dot--ex  { background: #4E8040; }
+.ch-dot--ip  { background: var(--accent); }
+.ch-dot--bal { background: #C8D4C0; border: 1px solid rgba(44,34,24,0.16); }
+
+/* Chart rows */
+
+.ch-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ch-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ch-row-label {
+  width: 115px;
+  flex-shrink: 0;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.ch-bar-track {
+  flex: 1;
+  height: 18px;
+  background: rgba(44,34,24,0.05);
+  border-radius: 3px;
+  display: flex;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.ch-seg {
+  height: 100%;
+  transition: width 0.4s ease;
+}
+
+.ch-seg--ex  { background: #4E8040; }
+.ch-seg--ip  { background: var(--accent); }
+.ch-seg--bal { background: #D0D8C8; }
+.ch-seg--over { background: #9A3030; }
+
+/* X-axis */
+
+.ch-x-axis {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+  padding-left: 123px;
+}
+
+.ch-x-tick {
+  font-size: 8px;
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+/* ── Economic Execution by Subchapter ─────────────────────────────────────── */
+
+.sub-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.sub-header {
+  display: flex;
+  align-items: center;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 4px;
+}
+
+.sub-col-label {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.sub-col-pct {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  width: 180px;
+  text-align: right;
+}
+
+.sub-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.sub-row:last-of-type { border-bottom: none; }
+
+.sub-row-icon {
+  font-size: 13px;
+  width: 18px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.sub-row-label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  flex: 1;
+  text-transform: uppercase;
+}
+
+.sub-bar-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 180px;
+}
+
+.sub-bar-track {
+  flex: 1;
+  height: 10px;
+  background: rgba(44,34,24,0.06);
+  border-radius: 3px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.sub-bar-fill {
+  height: 100%;
+  background: #4E8040;
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+
+.sub-bar-pct {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--text);
+  width: 46px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.sub-x-axis {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 120px;
+  margin-top: 4px;
+}
+
+.sub-x-tick {
+  font-size: 8px;
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+/* ── Payment Certificates ─────────────────────────────────────────────────── */
+
+.cert-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.mx-export-btn {
+  font-size: 9px;
+  padding: 6px 14px;
+  letter-spacing: 0.08em;
+}
+
+.cert-table-wrap {
+  overflow-x: auto;
+}
+
+.cert-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10px;
+}
+
+.cert-table th {
+  text-align: left;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.cert-table td {
+  padding: 7px 8px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  vertical-align: middle;
+}
+
+.cert-table tr:last-child td { border-bottom: none; }
+
+.cert-table tr:hover td { background: rgba(160,121,90,0.04); }
+
+.cert-num {
+  font-weight: 700;
+  color: var(--accent) !important;
+}
+
+.cert-amount {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.cert-pct-cell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 120px;
+}
+
+.cert-bar {
+  flex: 1;
+  height: 6px !important;
+  min-width: 60px;
+}
+
+.cert-bar-fill {
+  background: var(--accent) !important;
+}
+
+.cert-pct-val {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--accent);
+  width: 38px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.cert-dash {
+  color: var(--text-muted);
+}
+
+/* ── BIM Model ────────────────────────────────────────────────────────────── */
+
+.bim-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bim-label {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.bim-body {
+  display: flex;
+  gap: 6px;
+  align-items: stretch;
+}
+
+.bim-svg {
+  flex: 1;
+  height: 220px;
+  border-radius: 6px;
+  background: #D8D4C8;
+  border: 1px solid var(--border);
+  display: block;
+  object-fit: contain;
+  width: 0;
+}
+
+.bim-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px 0;
+}
+
+.bim-tool-btn {
+  width: 28px;
+  height: 28px;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  color: var(--text-muted);
+  font-size: 11px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+  flex-shrink: 0;
+}
+
+.bim-tool-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.bim-legend {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  padding-top: 4px;
+}
+
+.bim-leg-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9px;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.bim-leg-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}

@@ -1,0 +1,48 @@
+.company-header-controls {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 5px;
+}
+
+.chapter-select {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #F2EDE4;
+  padding: 7px 28px 7px 11px;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.06em;
+  border-radius: var(--radius);
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23C8D8C0' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 9px center;
+  cursor: pointer;
+  transition: border-color 0.18s;
+}
+
+.chapter-select:focus { outline: 2px solid rgba(168,200,154,0.5); outline-offset: 1px; }
+.chapter-select:hover { border-color: rgba(255,255,255,0.30); }
+
+.chapter-export-btn {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: var(--radius);
+  color: #C8D8C0;
+  cursor: pointer;
+  transition: background 0.18s, border-color 0.18s;
+  flex-shrink: 0;
+}
+
+.chapter-export-btn:hover {
+  background: rgba(255,255,255,0.18);
+  border-color: rgba(255,255,255,0.28);
+}

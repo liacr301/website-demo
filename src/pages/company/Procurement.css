@@ -1,0 +1,352 @@
+/* ── Procurement page ──────────────────────────────────────── */
+
+.procurement-page {
+  padding: 0 0 2rem;
+  color: var(--text);
+}
+
+/* KPI grid */
+.proc-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1.5rem 1.5rem 0;
+}
+
+.proc-kpi-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+}
+
+.proc-kpi-icon {
+  font-size: 2.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.proc-kpi-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.proc-kpi-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.proc-kpi-value {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text);
+  line-height: 1.1;
+}
+
+.proc-kpi-trend {
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.trend-up   { color: #4E8040; }
+.trend-down { color: #9A3030; }
+
+/* Two-column layout */
+.proc-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+}
+
+/* ── LEFT panel ──────────────────────────────────────────── */
+.proc-left {
+  padding: 1.25rem 1.25rem 1rem;
+  overflow: hidden;
+}
+
+.proc-table-wrapper {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.proc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.72rem;
+}
+
+.proc-table th {
+  text-align: left;
+  padding: 0.5rem 0.5rem;
+  font-size: 0.6rem;
+  letter-spacing: 0.07em;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.proc-table td {
+  padding: 0.5rem 0.5rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+  color: var(--text);
+}
+
+.proc-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.proc-table tbody tr:hover td {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.proc-total-row td {
+  border-top: 1px solid var(--accent) !important;
+  color: var(--accent) !important;
+  border-bottom: none !important;
+}
+
+.proc-contractor-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.proc-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.6rem;
+  height: 1.4rem;
+  border-radius: 3px;
+  font-size: 0.52rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #fff;
+  padding: 0 0.3rem;
+  flex-shrink: 0;
+}
+
+.proc-contractor-name {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.proc-contractor-role {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.proc-money {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.proc-bar-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+}
+
+.proc-progress {
+  width: 48px;
+  height: 5px;
+  flex-shrink: 0;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.proc-progress .progress-bar-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+.proc-remain {
+  color: var(--text-muted);
+  font-size: 0.72rem;
+}
+
+.proc-table-note {
+  margin-top: 0.75rem;
+  font-size: 0.62rem;
+  color: var(--text-muted);
+}
+
+/* ── RIGHT panel ─────────────────────────────────────────── */
+.proc-right {
+  padding: 1.25rem 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  overflow: hidden;
+}
+
+.proc-right-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.proc-search-row {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.proc-filter-row {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.proc-apply-btn {
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+/* Doc type tabs */
+.proc-type-tabs {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.proc-type-tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+  min-width: 68px;
+}
+
+.proc-type-tab:hover {
+  border-color: var(--accent);
+  background: rgba(201, 168, 76, 0.06);
+}
+
+.proc-type-tab.active {
+  border-color: var(--accent);
+  background: rgba(201, 168, 76, 0.12);
+}
+
+.proc-tab-icon {
+  font-size: 1.1rem;
+}
+
+.proc-tab-label {
+  font-size: 0.55rem;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.2;
+}
+
+.proc-tab-count {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* Doc table */
+.proc-doc-table-wrapper {
+  overflow-x: auto;
+  flex: 1;
+}
+
+.proc-doc-table th,
+.proc-doc-table td {
+  white-space: nowrap;
+}
+
+.proc-doc-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.proc-file-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
+  font-size: 0.55rem;
+  font-weight: 800;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.proc-doc-name {
+  font-size: 0.72rem;
+  color: var(--text);
+}
+
+.proc-muted {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+}
+
+.proc-actions {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.proc-action-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-muted);
+  padding: 0.2rem 0.45rem;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.proc-action-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* Footer */
+.proc-doc-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+}
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .proc-two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .proc-kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .proc-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+}

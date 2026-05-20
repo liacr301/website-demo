@@ -1,0 +1,293 @@
+.threed-page {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 56px);
+  overflow: hidden;
+}
+
+.threed-layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  padding: 12px 12px 8px;
+  gap: 14px;
+  min-height: 0;
+}
+
+/* ── Viewer container ── */
+.threed-viewer-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #080b05;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--shadow-md);
+}
+
+.threed-canvas {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 16px 52px;
+}
+
+.threed-model-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.threed-model-img {
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ── Left tool strip ── */
+.threed-left-tools {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  z-index: 5;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 6px;
+  backdrop-filter: blur(6px);
+}
+
+.tool3d-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 7px 7px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  cursor: pointer;
+  min-width: 44px;
+  transition: all 0.18s;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.tool3d-btn:hover { background: rgba(255,255,255,0.08); color: var(--text); }
+.tool3d-btn.active {
+  background: var(--accent-dim);
+  border-color: var(--accent-border);
+  color: var(--accent);
+}
+
+.tool3d-icon { font-size: 14px; line-height: 1; }
+
+.tool3d-btn span:last-child {
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ── View cube ── */
+.threed-view-cube {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 54px;
+  height: 54px;
+}
+
+.view-cube-face {
+  position: absolute;
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.5);
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.view-cube-face.top   { width: 30px; height: 16px; top: 0; left: 12px; transform: skewX(-20deg); }
+.view-cube-face.front { width: 30px; height: 30px; top: 14px; left: 0; }
+.view-cube-face.right { width: 24px; height: 30px; top: 14px; right: 0; transform: skewY(-25deg); }
+
+/* ── Bottom toolbar ── */
+.threed-bottom-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 8px 14px;
+  background: rgba(255,255,255,0.035);
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.toolbot-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 6px 9px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  cursor: pointer;
+  min-width: 50px;
+  transition: all 0.18s;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.toolbot-btn:hover { background: rgba(255,255,255,0.07); color: var(--text); }
+.toolbot-btn.active {
+  background: var(--accent-dim);
+  border-color: var(--accent-border);
+  color: var(--accent);
+}
+
+.toolbot-icon { font-size: 15px; line-height: 1; }
+
+.toolbot-btn span:last-child {
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: inherit;
+}
+
+/* ── Right panel ── */
+.threed-right-panel {
+  width: 224px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+
+.threed-view-toggle {
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.view-toggle-btn {
+  flex: 1;
+  padding: 9px 10px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background: var(--bg-card);
+  border: none;
+  border-right: 1px solid var(--border);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.18s;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.view-toggle-btn:last-child { border-right: none; }
+
+.view-toggle-btn.active {
+  background: var(--accent);
+  color: #14100a;
+}
+
+.view-toggle-btn:hover:not(.active) {
+  background: rgba(255,255,255,0.05);
+  color: var(--text);
+}
+
+.threed-panel-section {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 14px;
+}
+
+.threed-panel-title {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.threed-panel-label {
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+  letter-spacing: 0.06em;
+}
+
+.floor-plan-preview {
+  background: #080b05;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.floor-plan-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Layers ── */
+.layer-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+
+.layer-row:last-child { border-bottom: none; }
+.layer-row:hover { background: rgba(255,255,255,0.02); }
+
+.layer-icon { font-size: 12px; width: 16px; text-align: center; }
+
+.layer-label {
+  flex: 1;
+  font-size: 11px;
+  color: var(--text);
+}
+
+.layer-eye {
+  font-size: 13px;
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  cursor: pointer;
+  padding: 3px;
+  border-radius: var(--radius);
+  transition: color 0.18s, background 0.18s;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.layer-eye.visible { color: var(--accent); }
+.layer-eye:hover { color: var(--text); background: rgba(255,255,255,0.07); }
