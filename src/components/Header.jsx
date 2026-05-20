@@ -1,4 +1,5 @@
 import './Header.css'
+import headerBg from '../assets/background/background.jpeg'
 
 const IconSun = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -16,7 +17,7 @@ const IconSun = () => (
 
 export default function Header({ title, subtitle }) {
   return (
-    <header className="page-header">
+    <header className="page-header" style={{backgroundImage:`linear-gradient(to bottom,rgba(20,30,22,0.42) 0%,rgba(14,22,16,0.72) 100%),url(${headerBg})`}}>
       <div className="page-header-overlay" />
       <div className="page-header-content">
         <div className="page-header-left">
