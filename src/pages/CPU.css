@@ -35,8 +35,8 @@
   min-height: 156px;
   flex-shrink: 0;
   border-radius: var(--radius);
-  background: linear-gradient(135deg, #D0D4C4 0%, #C4C8B4 100%);
   border: 1px solid var(--border);
+  object-fit: cover;
 }
 
 .cpu-overview-info {
@@ -229,6 +229,14 @@
   gap: 16px;
   align-items: start;
 }
+
+.cpu-row4 .card {
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.cpu-row4 .card::-webkit-scrollbar { width: 4px; }
+.cpu-row4 .card::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
 
 .cpu-updates-card { padding: 18px; }
 .cpu-workplan-card { padding: 18px; }

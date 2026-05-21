@@ -201,7 +201,7 @@ const EQUIPMENT = [
   { icon: <i className="fi fi-rr-building"/>, label: 'Tower Cranes',   count: 2 },
   { icon: <i className="fi fi-rr-tractor"/>,  label: 'Excavators',     count: 4 },
   { icon: <i className="fi fi-rr-truck"/>,    label: 'Loaders',        count: 3 },
-  { icon: <i className="fi fi-rr-wrench"/>,   label: 'Concrete Pumps', count: 2 },
+  { icon: <i className="fi fi-rr-wrench-simple"/>, label: 'Concrete Pumps', count: 2 },
   { icon: <i className="fi fi-rr-bus"/>,      label: 'Trucks',         count: 7 },
 ]
 
@@ -348,7 +348,7 @@ function Donut() {
 /* ─── MASTER SCHEDULE ───────────────────────────────────────────── */
 function MasterSchedule() {
   return (
-    <div className="panel">
+    <div className="panel" style={{ display: 'flex', flexDirection: 'column' }}>
       <p className="panel-title">
         MASTER SCHEDULE (REFER TO S CURVE RECOVERY PLANNED VS ACTUAL BELOW)
       </p>
@@ -412,7 +412,7 @@ function MasterSchedule() {
 /* ─── WEEKLY HIGHLIGHTS ─────────────────────────────────────────── */
 function WeeklyHighlights() {
   return (
-    <div className="panel">
+    <div className="panel panel-scroll">
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
         <p className="panel-title" style={{ margin: 0 }}>WEEKLY HIGHLIGHTS</p>
         <span style={{ fontSize: 7, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>

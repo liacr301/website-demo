@@ -28,7 +28,7 @@ const docTypeTabs = [
   { icon: <i className="fi fi-rr-shopping-cart"/>, label: 'Purchase Orders',     count: 15 },
   { icon: <i className="fi fi-rr-box"/>,           label: 'Procurement Packages',count: 11 },
   { icon: <i className="fi fi-rr-handshake"/>,     label: 'Supplier Agreements', count: 8  },
-  { icon: <i className="fi fi-rr-wrench"/>,        label: 'Technical Submittals',count: 9  },
+  { icon: <i className="fi fi-rr-wrench-simple"/>, label: 'Technical Submittals',count: 9  },
   { icon: <i className="fi fi-rr-check"/>,         label: 'Material Approvals',  count: 5  },
 ]
 
@@ -163,11 +163,10 @@ export default function Procurement() {
                 onChange={(e) => setSearch(e.target.value)}
               />
             </div>
-            <button className="btn btn-ghost" onClick={() => setSearch('')}>CLEAR FILTERS</button>
           </div>
 
           {/* Filter row */}
-          <div className="filter-bar proc-filter-row">
+          <div className="proc-filter-row">
             <div className="filter-group">
               <label className="filter-label">CATEGORY</label>
               <select className="filter-select"><option>All</option></select>
@@ -189,6 +188,7 @@ export default function Procurement() {
               <select className="filter-select"><option>All</option></select>
             </div>
             <button className="btn btn-accent proc-apply-btn">APPLY FILTERS</button>
+            <button className="btn btn-ghost proc-apply-btn" onClick={() => setSearch('')}>CLEAR FILTERS</button>
           </div>
 
           {/* Doc type tabs */}

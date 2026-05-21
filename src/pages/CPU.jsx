@@ -1,10 +1,12 @@
 import Header from '../components/Header'
 import './CPU.css'
+import cpuOverviewImg from '../assets/cpu_members/CPU.png'
 import cpuImg1 from '../assets/cpu_members/Captura de ecrã de 2026-05-20 18-31-32.png'
 import cpuImg2 from '../assets/cpu_members/Captura de ecrã de 2026-05-20 18-31-41.png'
 import cpuImg3 from '../assets/cpu_members/Captura de ecrã de 2026-05-20 18-31-46.png'
 import cpuImg4 from '../assets/cpu_members/Captura de ecrã de 2026-05-20 18-31-54.png'
 import cpuImg5 from '../assets/cpu_members/Captura de ecrã de 2026-05-20 18-32-04.png'
+import cpuHorizontalImg from '../assets/cpu_members/CPU_IMAGEMHORIZONTAL.png'
 
 const projectOverview = [
   { label: 'General Contractor',                  icon: <i className="fi fi-rr-tools"/>, value: 'BuildCore Group' },
@@ -100,7 +102,7 @@ export default function CPU() {
         <div className="cpu-row2">
           <div className="card cpu-overview-card">
             <div className="cpu-overview-layout">
-              <div className="cpu-overview-photo" />
+              <img src={cpuOverviewImg} alt="Project Overview" className="cpu-overview-photo" />
               <div className="cpu-overview-info">
                 <div className="card-title">PROJECT OVERVIEW</div>
                 {projectOverview.map((item, i) => (
@@ -164,7 +166,7 @@ export default function CPU() {
         <div className="card cpu-month-end-card">
           <div className="card-title">PROGRESS AT THE END OF THE MONTH</div>
           <div className="month-end-caption">Overall view of construction progress – March 2025</div>
-          <img src={cpuImg5} alt="End of month" className="month-end-photo" />
+          <img src={cpuHorizontalImg} alt="End of month" className="month-end-photo" />
         </div>
 
         {/* Row: Updates + Workplan + Schedule + Budget */}

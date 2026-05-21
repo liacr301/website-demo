@@ -25,6 +25,5 @@
   overflow-x: hidden;
   background: var(--bg-main);
   min-width: 0;
-  /* Subtle shadow at the left edge where sidebar meets content */
   box-shadow: inset 2px 0 8px rgba(20, 30, 26, 0.06);
 }

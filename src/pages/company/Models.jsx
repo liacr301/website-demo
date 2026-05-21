@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import './Models.css'
 import CompanyHeader from '../../components/CompanyHeader'
+import masterplanImg from '../../assets/overview_cms/masterplan.jpeg'
+import renderImg from '../../assets/render/RENDER.png'
 
 /* ─── ICONS (inline SVG) ────────────────────────────────────────── */
 const IconHome = () => (
@@ -380,7 +382,7 @@ export default function Models() {
     { id: 'fly',     icon: <i className="fi fi-rr-paper-plane"/>, label: 'FLY' },
     { id: 'orbit',   icon: <i className="fi fi-rr-undo"/>,        label: 'ORBIT' },
     { id: 'zoom',    icon: <i className="fi fi-rr-search"/>,      label: 'ZOOM' },
-    { id: 'measure', icon: <i className="fi fi-rr-ruler"/>,       label: 'MEASURE' },
+    { id: 'measure', icon: <i className="fi fi-rr-ruler-combined"/>, label: 'MEASURE' },
   ]
 
   const bottomTools = [
@@ -446,8 +448,8 @@ export default function Models() {
               ))}
             </div>
 
-            {/* Site plan SVG */}
-            <SitePlanSVG />
+            {/* Site plan */}
+            <img src={masterplanImg} alt="Site Plan" className="site-plan-svg" />
           </div>
 
           {/* Bottom toolbar */}
@@ -467,7 +469,7 @@ export default function Models() {
 
         {/* Right panel */}
         <div className="models-panel">
-          <VillaRender />
+          <img src={renderImg} alt="Villa Render" className="villa-render" style={{ objectFit: 'cover' }} />
 
           <div className="panel-content">
             <div className="villa-header">

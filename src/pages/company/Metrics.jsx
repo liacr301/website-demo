@@ -1,6 +1,6 @@
 import CompanyHeader from '../../components/CompanyHeader'
 import './Metrics.css'
-import bimImg from '../../assets/planning/WhatsApp Image 2026-05-20 at 16.44.50.jpeg'
+import bimImg from '../../assets/planning/planing&METRICS.png'
 
 /* ─── Data ─────────────────────────────────────────────────────────────────── */
 

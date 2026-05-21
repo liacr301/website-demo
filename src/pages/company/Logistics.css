@@ -230,12 +230,22 @@
   display: flex;
   gap: 0.5rem;
   align-items: flex-end;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+}
+
+.log-filter-row .filter-select {
+  min-width: 0;
+  width: 100%;
+}
+
+.log-filter-row .filter-group {
+  flex: 1;
+  min-width: 0;
 }
 
 .log-apply-btn {
   align-self: flex-end;
-  margin-left: auto;
+  flex-shrink: 0;
 }
 
 /* Doc type tabs */

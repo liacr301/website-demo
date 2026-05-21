@@ -80,10 +80,9 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  align-self: start;
 }
 
-.co-kpi-card { padding: 16px; }
+.co-kpi-card { padding: 16px; flex: 1; }
 
 .co-kpi-header-row {
   display: flex;

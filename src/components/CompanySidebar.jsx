@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import './Sidebar.css'
 
@@ -74,6 +75,13 @@ const navItems = [
 
 export default function CompanySidebar() {
   const navigate = useNavigate()
+  const [open, setOpen] = useState(false)
+
+  const handleLogout = () => {
+    setOpen(false)
+    navigate('/')
+  }
+
   return (
     <aside className="sidebar">
       <nav className="sidebar-nav">
@@ -88,7 +96,16 @@ export default function CompanySidebar() {
           </NavLink>
         ))}
       </nav>
-      <div className="sidebar-avatar" onClick={() => navigate('/company/settings')}>CT</div>
+      <div className="sidebar-avatar-wrap">
+        {open && (
+          <div className="sidebar-logout-popup">
+            <button className="sidebar-logout-btn" onClick={handleLogout}>
+              <i className="fi fi-rr-sign-out-alt"/> Log Out
+            </button>
+          </div>
+        )}
+        <div className="sidebar-avatar" onClick={() => setOpen(o => !o)}>CT</div>
+      </div>
     </aside>
   )
 }

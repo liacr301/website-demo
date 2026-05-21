@@ -82,10 +82,10 @@ const statusLegend = [
 
 const docTypeTabs = [
   { icon: <i className="fi fi-rr-folder"/>,   label: 'All Documents',     count: 86 },
-  { icon: <i className="fi fi-rr-truck"/>,    label: 'Delivery Notes',    count: 18 },
+  { icon: <i className="fi fi-rr-truck-moving"/>, label: 'Delivery Notes',    count: 18 },
   { icon: <i className="fi fi-rr-check"/>,    label: 'Material Approvals',count: 14 },
   { icon: <i className="fi fi-rr-clipboard"/>,label: 'Packing Lists',     count: 12 },
-  { icon: <i className="fi fi-rr-pen"/>,      label: 'Method Statements', count: 10 },
+  { icon: <i className="fi fi-rr-pen-nib"/>,  label: 'Method Statements', count: 10 },
   { icon: <i className="fi fi-rr-map"/>,      label: 'Logistics Plans',   count: 8  },
   { icon: <i className="fi fi-rr-id-badge"/>, label: 'Permits',           count: 6  },
 ]
@@ -266,11 +266,10 @@ export default function Logistics() {
                 onChange={(e) => setSearch(e.target.value)}
               />
             </div>
-            <button className="btn btn-ghost" onClick={() => setSearch('')}>CLEAR FILTERS</button>
           </div>
 
           {/* Filters */}
-          <div className="filter-bar log-filter-row">
+          <div className="log-filter-row">
             <div className="filter-group">
               <label className="filter-label">CATEGORY</label>
               <select className="filter-select"><option>All</option></select>
@@ -292,6 +291,7 @@ export default function Logistics() {
               <select className="filter-select"><option>All</option></select>
             </div>
             <button className="btn btn-accent log-apply-btn">APPLY FILTERS</button>
+            <button className="btn btn-ghost log-apply-btn" onClick={() => setSearch('')}>CLEAR FILTERS</button>
           </div>
 
           {/* Doc type tabs */}
