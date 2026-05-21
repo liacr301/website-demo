@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import Header from '../components/Header'
 import './ThreeDModel.css'
-import model3d from '../assets/my_home_members/model_3d.png'
-import floorPlan from '../assets/my_home_members/floor_plant.png'
+import model3d from '../assets/my_home_members/WhatsApp Image 2026-05-21 at 15.39.10.jpeg'
+import floorPlan from '../assets/my_home_members/WhatsApp Image 2026-05-21 at 15.39.33.jpeg'
 
 const layers = [
   { id: 'arch',      label: 'Architectural', icon: <i className="fi fi-rr-square"/> },
