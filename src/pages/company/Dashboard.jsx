@@ -1,5 +1,6 @@
 import './Dashboard.css'
 import CompanyHeader from '../../components/CompanyHeader'
+import renderImg from '../../assets/render/RENDER.png'
 
 /* ─── DATA ──────────────────────────────────────────────────────── */
 
@@ -452,18 +453,7 @@ function DvsStatus() {
   return (
     <div className="panel">
       <div className="aerial-photo">
-        <svg width="80" height="50" viewBox="0 0 80 50" style={{ position: 'absolute', opacity: 0.25 }}>
-          {/* simplified aerial site sketch */}
-          <rect x="5"  y="10" width="18" height="8"  fill="#5a9a3c" rx="1" />
-          <rect x="26" y="10" width="18" height="8"  fill="#5a9a3c" rx="1" />
-          <rect x="5"  y="22" width="12" height="8"  fill="#3a7a2c" rx="1" />
-          <rect x="20" y="22" width="12" height="8"  fill="#3a7a2c" rx="1" />
-          <rect x="35" y="22" width="12" height="8"  fill="#4a8a34" rx="1" />
-          <rect x="50" y="10" width="25" height="15" fill="#2a5a1c" rx="1" />
-          <path d="M5 35 Q40 30 75 38" stroke="#888" strokeWidth="1" fill="none" />
-          <path d="M5 18 Q20 15 45 18" stroke="#666" strokeWidth="0.5" fill="none" />
-        </svg>
-        <span className="aerial-label">AERIAL VIEW</span>
+        <img src={renderImg} alt="Render" className="aerial-img" />
       </div>
 
       <div className="status-row">

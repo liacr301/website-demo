@@ -224,32 +224,17 @@
 .aerial-photo {
   width: 100%;
   height: 84px;
-  background: linear-gradient(160deg, #C8D4B8 0%, #B8C8A4 40%, #D0D8C0 100%);
   border-radius: var(--radius);
   border: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
   overflow: hidden;
   margin-bottom: 12px;
 }
 
-.aerial-photo::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 30% 40%, rgba(78,128,64,0.20) 0%, transparent 40%),
-    radial-gradient(circle at 70% 60%, rgba(60,100,40,0.14) 0%, transparent 35%);
-}
-
-.aerial-label {
-  font-size: 8px;
-  color: rgba(44,34,24,0.45);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  z-index: 1;
+.aerial-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .status-row {
